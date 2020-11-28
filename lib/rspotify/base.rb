@@ -121,6 +121,7 @@ module RSpotify
       @id            = options['id']
       @type          = options['type']
       @uri           = options['uri']
+      @json          = options
     end
 
     # Generate an embed code for an album, artist or track.
