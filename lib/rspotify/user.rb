@@ -48,8 +48,6 @@ module RSpotify
       if (access_refresh_proc.respond_to? :call)
         access_refresh_proc.call(response['access_token'], response['expires_in'])
       end
-    rescue RestClient::BadRequest => e
-      raise e if e.response !~ /Refresh token revoked/
     end
     private_class_method :refresh_token
 
